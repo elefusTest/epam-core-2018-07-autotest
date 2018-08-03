@@ -1,7 +1,5 @@
 package com.epam.se02.generics;
 
-import com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
-
 import java.util.ArrayList;
 import java.util.List;
 
