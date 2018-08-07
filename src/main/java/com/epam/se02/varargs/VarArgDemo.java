@@ -12,6 +12,8 @@ public final class VarArgDemo {
 //        }
 //    }
 
+//    static void methodName(int... xs, char s) {} // error
+
     public static void main(String... __) {
         Integer[] i = { 1, 2, 3, 4, 5 };
         printArgCount(7, "No", true, null); // 1

@@ -9,6 +9,7 @@ public enum Day {
     FRIDAY,
     SATURDAY;
 
+    @Deprecated
     public boolean isWeekend() {
         switch (this) {
             case SUNDAY:
