@@ -50,6 +50,8 @@ class PersonImplTest {
                 .setLastName("argfaergref");
 
         System.out.println(person1.getLastName());
+
+        PersonImpl person2 = person1.withLastName("Петичкин");
     }
 
 }

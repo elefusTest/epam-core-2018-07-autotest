@@ -2,6 +2,8 @@ package com.epam.se02.lombok;
 
 import lombok.*;
 import lombok.Builder.Default;
+import lombok.experimental.Wither;
+import lombok.extern.slf4j.Slf4j;
 
 import java.sql.SQLException;
 import java.util.Date;
@@ -13,12 +15,14 @@ import java.util.List;
 //@Value // {final перед классом} @Getter @ToString @EqualsAndHashCode @AllArgsConstructor @FieldDefaults(level = PRIVATE, makeFinal = true)
 @EqualsAndHashCode(exclude = "age")
 @Builder // @AllArgsConstructor(PACKAGE)
+@Slf4j
 public class PersonImpl implements Person {
 
     @Default
     int age = 36;
     String firstName;
 
+    @Wither
     @Getter(onMethod = @__(@Override))
     String lastName;
 
@@ -27,6 +31,8 @@ public class PersonImpl implements Person {
 
     @SneakyThrows
     public final String method() {
+
+
 //        try {
             throw new SQLException("jkhsadg");
 //        } catch (SQLException e) {
