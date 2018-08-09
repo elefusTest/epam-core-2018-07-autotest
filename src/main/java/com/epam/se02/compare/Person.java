@@ -41,7 +41,7 @@ public class Person implements Comparable<Person> {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "PersonImpl{" +
                 "name='" + name + '\'' +
                 ", surName='" + surName + '\'' +
                 ", patronymic='" + patronymic + '\'' +

@@ -8,7 +8,7 @@ import java.util.List;
 public class Example6 {
 
     public static void main(String[] args) {
-//        Person[] people = new Person[3];
+//        PersonImpl[] people = new PersonImpl[3];
 //        people[0] = new Student(55, "a", "b");
 //        people[1] = new Student(60, "a", "b");
 //        people[2] = new Student(70, "a", "b");
