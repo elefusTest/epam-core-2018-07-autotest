@@ -10,8 +10,8 @@ public class Example1 {
             new Person("Иванов", "Иван", "Иванович", 18),
             new Person("Николаев", "Сергей", "Николаевич", 19),
             new Person("Николаев", "Николай", "Николаевич", 20),
-            new Person("Николаев", "Николай", "A", 18),
-            new Person("A", "B", "C", 16),
+            new Person("Николаев", "Николай", "A123", 18),
+            new Person("A123", "B", "C", 16),
         };
 
 //        Arrays.sort(people, new PersonByAgeComparator());
