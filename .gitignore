@@ -1,6 +1,3 @@
-*.iml
-target
-out
-*.class
-*.jar
-.idea
+/**/logs/
+
+/**/target/

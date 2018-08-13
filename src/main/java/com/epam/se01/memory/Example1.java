@@ -26,11 +26,11 @@ public class Example1 {
 
         // boolean  ~    HotSpot [1]
 
-        A ref = new A();
-        System.out.println(ref.intValue);
-
-        int val = 10;
-        Integer wrapper = new Integer(val);
+//        A123 ref = new A123();
+//        System.out.println(ref.intValue);
+//
+//        int val = 10;
+//        Integer wrapper = new Integer(val);
     }
 }
 
