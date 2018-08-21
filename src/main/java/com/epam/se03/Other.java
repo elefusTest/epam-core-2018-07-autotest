@@ -20,5 +20,14 @@ public final class Other {
         System.out.print((hello == ("Hel" + "lo")) + " "); // true
         System.out.print((hello == ("Hel" + lo)) + " "); // false
         System.out.println(hello == ("Hel" + lo).intern()); // true
+
+
+//        "12345678910"
+        StringBuilder s = new StringBuilder();
+        for (int i = 1; i <= 10; i++) {
+//            s += i;
+            s.append(i);
+        }
+        System.out.println(s.toString());
     }
 }
