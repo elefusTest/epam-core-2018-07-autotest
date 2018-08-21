@@ -10,7 +10,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @AllArgsConstructor
 @FieldDefaults(level = PRIVATE)
-public final class CloseableInputStream extends InputStream {
+public final class NonCloseableInputStream extends InputStream {
 
     @Delegate(excludes = AutoCloseable.class)
     InputStream inputStream;
