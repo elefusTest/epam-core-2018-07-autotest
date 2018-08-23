@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 import static lombok.AccessLevel.PRIVATE;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class PersonImplTest {
@@ -33,7 +34,7 @@ class PersonImplTest {
                 .contact("kushadfharth")
                 .build();
 
-        System.out.println(person.getAge());
+        assertThat(person.getAge()).isEqualTo(36);
 
         StringBuffer stringBuffer = new StringBuffer("dfg")
                 .append("asargadrg")
@@ -49,7 +50,7 @@ class PersonImplTest {
                 .setFirstName("Aghfb")
                 .setLastName("argfaergref");
 
-        System.out.println(person1.getLastName());
+        assertThat(person1.getLastName()).isEqualTo("argfaergref");
 
         PersonImpl person2 = person1.withLastName("Петичкин");
     }
