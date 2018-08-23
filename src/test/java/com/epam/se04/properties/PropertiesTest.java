@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Properties;
 
-//import static com.epam.se04.InputStreamUtils.withFileInputStream;
+import static com.epam.se04.InputStreamUtils.withFileInputStream;
 import static lombok.AccessLevel.PRIVATE;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,7 +21,7 @@ final class PropertiesTest {
 
     @BeforeAll
     static void setUp() {
-//        withFileInputStream(PROPS_FILE_NAME, properties::load);
+        withFileInputStream(PROPS_FILE_NAME, properties::load);
     }
 
     @Test

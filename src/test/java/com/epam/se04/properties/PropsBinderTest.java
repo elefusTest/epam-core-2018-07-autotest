@@ -13,12 +13,12 @@ class PropsBinderTest {
     @Test
     @DisplayName("From method works correctly")
     void testFrom() {
-//        val props = PropsBinder.from(Props.class);
-//        assertThat(props.getProp1(), is(50));
-//        assertThat(props.getProp2(), is("qwerty!"));
-//        Props2 p3 = props.getP3();
-//        assertThat(p3.getP1(), is(2));
-//        assertThat(p3.getP2(), is("qwerty!!!"));
+        val props = PropsBinder.from(Props.class);
+        assertThat(props.getProp1(), is(50));
+        assertThat(props.getProp2(), is("qwerty!"));
+        Props2 p3 = props.getP3();
+        assertThat(p3.getP1(), is(2));
+        assertThat(p3.getP2(), is("qwerty!!!"));
     }
 }
 
