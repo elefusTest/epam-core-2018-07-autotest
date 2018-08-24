@@ -19,7 +19,7 @@ public class Example3 {
     // T5 T6 T7
     public  static void method() {
         synchronized (Example3.class) {
-            System.out.println("Method from Example4");
+            System.out.println("Method of Example4");
         }
     }
 }

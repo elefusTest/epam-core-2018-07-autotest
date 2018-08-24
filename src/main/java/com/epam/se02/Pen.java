@@ -53,7 +53,7 @@ class Pen implements Cloneable, Comparable<Pen> {
 //    @Override
 //    protected void finalize() throws Throwable {
 //        System.out.println(Thread.currentThread());
-//        System.out.println("Called finalize from class Pen");
+//        System.out.println("Called finalize of class Pen");
 //    }
 
 
