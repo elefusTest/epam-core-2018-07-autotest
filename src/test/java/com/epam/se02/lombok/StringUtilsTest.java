@@ -7,17 +7,17 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static lombok.AccessLevel.PRIVATE;
+import static org.assertj.core.api.Assertions.assertThat;
+
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class StringUtilsTest {
     @Test
     @SneakyThrows
     @DisplayName("\"WithSymbol\" method works correctly")
     void testWithSymbol() {
-        // given
-        System.out.println(StringUtils.withSymbol("jhgasdf", '?'));
-        // when
-
-        // then
+        // given, when, then
+        assertThat(StringUtils.withSymbol("jhgasdf", '?'))
+                .isEqualTo("jhgasdf?");
     }
 
 }

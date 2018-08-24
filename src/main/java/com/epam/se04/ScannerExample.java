@@ -5,7 +5,6 @@ import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.val;
 
-import java.io.InputStream;
 import java.util.Scanner;
 
 import static lombok.AccessLevel.PRIVATE;
@@ -27,15 +26,13 @@ public final class ScannerExample {
 
         readFromScanner();
 
-        System.out.write(104); // ASCII 'h'
-        System.out.write('\n');
+        System.out.println(104); // ASCII 'h'
 
-        byte[] b1 = new byte[5];
+        val b1 = new byte[5];
         System.in.read(b1);
-        System.out.write(b1);
-        System.out.write('\n');
+        System.out.println(b1);
 
-        byte[] b2 = new byte[System.in.available()];
+        val b2 = new byte[System.in.available()];
         int len = b2.length;
         for (int i = 0; i < len; i++)
             b2[i] = (byte) System.in.read();
@@ -44,15 +41,12 @@ public final class ScannerExample {
     }
 
     public static void readFromScanner() {
-        InputStream in = new CloseableInputStream(System.in);
-        @Cleanup val scanner = new Scanner(in);
-        while ((scanner.hasNext())) {
-            String next = scanner.next();
-            if (next.equals("C")) {
-                return;
-            }
+        @Cleanup val scanner = new Scanner(
+                new NonCloseableInputStream(
+                        System.in));
+        String next;
+        while (!(next = scanner.next()).equals("C"))
             System.out.println(next);
-        }
     }
 
 }

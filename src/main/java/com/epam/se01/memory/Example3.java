@@ -1,5 +1,7 @@
 package com.epam.se01.memory;
 
+import lombok.experimental.PackagePrivate;
+
 public class Example3 {
 
     // HEAP
@@ -56,5 +58,6 @@ public class Example3 {
 
 class IntHolder {
 
+    @PackagePrivate
     int value;
 }

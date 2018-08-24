@@ -1,8 +1,11 @@
 package com.epam.se01.visibility;
 
+import lombok.experimental.PackagePrivate;
+
 public class A {
 
     private int privateField;
+    @PackagePrivate
     int defaultField;
     protected int protectedField;
     public int publicField;
