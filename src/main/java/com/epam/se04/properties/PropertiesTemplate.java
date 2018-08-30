@@ -46,8 +46,7 @@ public interface PropertiesTemplate extends Supplier<Properties> {
         return constructor.newInstance(
                 Arrays.stream(constructor.getParameters())
                         .map(parameter -> resolveParameter(getProperty, parameter))
-                        .toArray()
-        );
+                        .toArray());
     }
 
     @NotNull
@@ -86,7 +85,7 @@ public interface PropertiesTemplate extends Supplier<Properties> {
     default boolean containsOnlyKeys(String... keys) {
         val properties = get();
         return properties.size() == keys.length
-//                && properties.keySet().containsAll(Set.of(keys)); // Java 9+
+                //&& properties.keySet().containsAll(Set.of(keys)); // Java 9+
                 && properties.keySet().containsAll(Arrays.asList(keys)); // Java 8+
     }
 }
