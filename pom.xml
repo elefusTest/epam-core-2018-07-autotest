@@ -19,6 +19,13 @@
 
     <dependencies>
 
+        <!-- H2 -->
+        <dependency>
+        	<groupId>com.h2database</groupId>
+        	<artifactId>h2</artifactId>
+        	<version>LATEST</version>
+        </dependency>
+
         <!-- COMMON LIBS (Log4J2 & Vavr) -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>

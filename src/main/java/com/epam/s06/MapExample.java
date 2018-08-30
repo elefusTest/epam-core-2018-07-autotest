@@ -1,11 +1,6 @@
 package com.epam.s06;
 
-import com.epam.se02.varargs.VarArgDemo;
-
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public final class MapExample {
     public static void main(String... __) {
@@ -35,5 +30,7 @@ public final class MapExample {
         System.out.printf("\nThe age for Lewis is %d%n",
                 stringIntegerLinkedHashMap.get("Lewis"));
         System.out.println(stringIntegerLinkedHashMap);
+
+
     }
 }
