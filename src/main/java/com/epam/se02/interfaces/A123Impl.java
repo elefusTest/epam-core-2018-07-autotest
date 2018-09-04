@@ -1,6 +1,6 @@
 package com.epam.se02.interfaces;
 
-public final class A123Impl implements A123, B {
+public final class A123Impl implements A123 {
 
     @Override
     public void m1() {
