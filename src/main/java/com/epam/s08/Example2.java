@@ -7,11 +7,11 @@ import java.io.InputStreamReader;
 import java.sql.*;
 import java.util.Properties;
 
-public class Example1 {
+public class Example2 {
 
     public static void main(String[] args) throws SQLException, IOException {
         Properties props = new Properties();
-        props.load(Example1.class.getResourceAsStream("db.properties"));
+        props.load(Example2.class.getResourceAsStream("db.properties"));
 
         int id = Integer.parseInt(args[0]);
         String name = args[1];
@@ -21,16 +21,15 @@ public class Example1 {
         try (Connection connection = DriverManager.getConnection(props.getProperty("db"), props)) {
             System.out.println("Connection opened: " + !connection.isClosed());
 
-            try (Statement statement = connection.createStatement()) {
+            try (PreparedStatement statement = connection.prepareStatement("INSERT INTO UNIVERSITY.STUDENTS (ID, LAST_NAME, FIRST_NAME, GROUP_ID) VALUES (?, ?, ?, ?)")) {
 //                updateDepartment(statement);
 //                selectFromDepartments(statement);
-                int updatedRows = statement.executeUpdate("INSERT INTO UNIVERSITY.STUDENTS (ID, LAST_NAME, FIRST_NAME, GROUP_ID) VALUES ("
-                        + id + ","
-                        + "'" + name + "',"
-                        + "'" + surName + "',"
-                        + groupId +
-                        ")");
-                System.out.println(updatedRows);
+                statement.setInt(1, id);
+                statement.setString(2, name);
+                statement.setString(3, surName);
+                statement.setInt(4, groupId);
+
+                System.out.println(statement.executeUpdate());
 
             }
         }
@@ -54,7 +53,7 @@ public class Example1 {
 
     private static void howToUseResources() throws IOException {
         //        InputStream sqlFileInputStream = Example1.class.getResourceAsStream("./../../../1.sql");
-        InputStream sqlFileInputStream = Example1.class.getResourceAsStream("/1.sql");
+        InputStream sqlFileInputStream = Example2.class.getResourceAsStream("/1.sql");
         String sql = new BufferedReader(new InputStreamReader(sqlFileInputStream)).readLine();
         System.out.println(sql);
     }
