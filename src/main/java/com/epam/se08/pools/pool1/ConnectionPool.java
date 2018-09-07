@@ -1,4 +1,4 @@
-package com.epam.s08.pools.pool1;
+package com.epam.se08.pools.pool1;
 
 import lombok.Setter;
 import lombok.experimental.Delegate;

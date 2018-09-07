@@ -1,4 +1,4 @@
-package com.epam.s06.streams;
+package com.epam.se06.streams;
 
 import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;

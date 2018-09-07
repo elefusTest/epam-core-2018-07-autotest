@@ -1,4 +1,4 @@
-package com.epam.s08.pools.pool2;
+package com.epam.se08.pools.pool2;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

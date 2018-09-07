@@ -1,4 +1,4 @@
-package com.epam.s08.pools.pool2;
+package com.epam.se08.pools.pool2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,6 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 public class ConnectionPool {
 

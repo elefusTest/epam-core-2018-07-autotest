@@ -1,4 +1,4 @@
-package com.epam.s08;
+package com.epam.se08;
 
 import java.io.BufferedReader;
 import java.io.IOException;

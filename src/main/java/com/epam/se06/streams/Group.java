@@ -1,4 +1,4 @@
-package com.epam.s06.streams;
+package com.epam.se06.streams;
 
 import lombok.Getter;
 

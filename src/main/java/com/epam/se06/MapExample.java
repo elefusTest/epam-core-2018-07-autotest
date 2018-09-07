@@ -1,4 +1,4 @@
-package com.epam.s06;
+package com.epam.se06;
 
 import java.util.*;
 

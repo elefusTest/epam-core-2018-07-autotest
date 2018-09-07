@@ -1,4 +1,4 @@
-package com.epam.s08;
+package com.epam.se08;
 
 import lombok.Cleanup;
 import lombok.SneakyThrows;

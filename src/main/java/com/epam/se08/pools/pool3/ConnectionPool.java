@@ -1,4 +1,4 @@
-package com.epam.s08.pools.pool3;
+package com.epam.se08.pools.pool3;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

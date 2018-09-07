@@ -1,4 +1,4 @@
-package com.epam.s06;// import com.epam.s06.MapUtils
+package com.epam.se06;// import com.epam.se06.MapUtils
 
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.DisplayName;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-import static com.epam.s06.MapUtils.entry;
+import static com.epam.se06.MapUtils.entry;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
