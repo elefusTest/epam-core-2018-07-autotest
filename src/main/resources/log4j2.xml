@@ -14,6 +14,7 @@
             <SizeBasedTriggeringPolicy size="10MB"/>
         </RollingFile>
     </Appenders>
+
     <Loggers>
         <Root level="info">
             <!--<Root level="trace">-->

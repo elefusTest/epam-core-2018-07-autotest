@@ -11,7 +11,7 @@ public class Student {
     private String login;
     private String name;
     private String faculty;
-    private int telephone;
+    private Integer telephone;
     private Address address;
 }
 
