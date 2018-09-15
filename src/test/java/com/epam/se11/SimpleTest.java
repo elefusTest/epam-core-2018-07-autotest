@@ -52,7 +52,7 @@ class SimpleTest {
     }
 
     @Test
-    void sumTwoPositiveValues() {
+    void sumTwoPositiveValues1() {
         // Prepare
         Summator summator = new Summator();
 

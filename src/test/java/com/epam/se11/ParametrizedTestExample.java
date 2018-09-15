@@ -1,57 +1,47 @@
 package com.epam.se11;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import java.util.Arrays;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
-import static org.junit.Assert.assertArrayEquals;
+class ParametrizedTestExample {
 
-public class ParametrizedTestExample {
+    @DisplayName("Sum two positive values")
+    @CsvSource(value = {"1 1 2", "2 3 5", "4 1 6"}, delimiter = ' ')
+    @ParameterizedTest(name = "[{index}] → {0} + {1} = {2}")
+    void sumTwoPositiveValues(int a, int b, int expected) {
+        Summator summator = new Summator();
 
-    @ParameterizedTest
-    @ValueSource(strings = {"a", "b", "c", "de"})
-    void example(String value) {
-        assertEquals(1, value.length());
+        int actual = summator.sum(a, b);
+
+        assertEquals(expected, actual);
     }
 
-    private static char[] revertString(char[] chars) {
-        char[] result = new char[chars.length];
-        for (int i = 0; i < chars.length; ++i) {
-            result[i] = chars[chars.length - 1 - i];
-        }
-        return result;
-    }
 
-    @Test
-    void name() {
-        char[] result = revertString(new char[]{'a', 'b', 'c'});
-        assertArrayEquals(new char[]{'c', 'b', 'a'}, result);
-
-    }
-
-    @Test
-    void name1() {
-        char[] result = revertString(new char[]{'a', 'b'});
-        assertArrayEquals(new char[]{'b', 'a'}, result);
-
-    }
-
-    @Test
-    void name2() {
-        char[] result = revertString(new char[]{'a'});
-        assertArrayEquals(new char[]{'a'}, result);
-
-    }
-
-    @Test
-    void name3() {
-        char[] result = revertString(new char[]{});
-        assertArrayEquals(new char[]{}, result);
-
-    }
-
+    //    @Test
+//    void sumTwoPositiveValues1() {
+//        sumTwoPositiveValues(1, 1, 2);
+//    }
+//
+//    @Test
+//    void sumTwoPositiveValues2() {
+//        sumTwoPositiveValues(2, 4, 6);
+//    }
+//
+//    @Test
+//    void sumTwoPositiveValues3() {
+//        sumTwoPositiveValues(3, 1, 4);
+//    }
+//
+//    private void sumTwoPositiveValues(int a, int b, int expected) {
+//        Summator summator = new Summator();
+//
+//        int actual = summator.sum(a, b);
+//
+//        assertEquals(expected, actual);
+//    }
 }
