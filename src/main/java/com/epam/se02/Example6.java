@@ -31,7 +31,7 @@ class B {
     }
 
     void method() {
-        System.out.println("Hello from B");
+        System.out.println("Hello of B");
     }
 }
 
@@ -48,6 +48,6 @@ class C extends B {
 
     @Override
     public void method() {
-        System.out.println("Hello from C");
+        System.out.println("Hello of C");
     }
 }

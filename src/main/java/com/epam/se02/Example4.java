@@ -3,14 +3,14 @@ package com.epam.se02;
 public class Example4 {
 
     public static void method() {
-        System.out.println("Method from Example4");
+        System.out.println("Method of Example4");
     }
 }
 
 class Example4Child extends Example4 {
 
     public static void method() {
-        System.out.println("Method from Example4Child");
+        System.out.println("Method of Example4Child");
     }
 }
 

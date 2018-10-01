@@ -23,7 +23,7 @@ class Singleton {
     private Singleton() {}
 
     public void method() {
-        System.out.println("Hello from singleton");
+        System.out.println("Hello of singleton");
     }
 
     public static Singleton getInstance() {

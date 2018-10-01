@@ -23,7 +23,7 @@ class Example2Child extends Example2 {
 
     @Override
     public void say() {
-        System.out.println("Hello from Example2Child: " + getString());
+        System.out.println("Hello of Example2Child: " + getString());
     }
 }
 
